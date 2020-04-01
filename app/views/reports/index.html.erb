@@ -1,2 +1,22 @@
-<h1>Reports#index</h1>
-<p>Find me in app/views/reports/index.html.erb</p>
+<div class="main">
+    <h1>日報一覧</h1>
+
+    <div class="reports">
+        <% @reports.each do |report|%>
+            <div class="report">
+                <p>username</p>
+                <div>
+                    <div>
+                        <%= report.content %>
+                    </div>
+                    <div>
+                        <%= link_to  "詳細","/reports/show"  %>
+                    </div>
+                </div>
+                <p><%= report.created_at %></p>
+                <%= link_to  "編集", "/reports/edit" %>
+                <%= link_to  "削除", "/reports/destroy" %>
+            </div>
+        <% end %>
+    </div>
+</div>
