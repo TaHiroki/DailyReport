@@ -1,0 +1,16 @@
+<div class="main">
+    <h1>日報作成</h1>
+
+    <%= form_tag("/reports/create") do %>
+    <div class="report-new">
+        <div>
+            <p>タイトル</p>
+            <input name="title">
+            <p>日報内容</p>
+            <textarea name="content"></textarea>
+        </div>
+
+        <input type="submit" value="作成" class="new-btn">
+    </div>
+    <% end %>
+</div>
