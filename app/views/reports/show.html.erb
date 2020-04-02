@@ -1,16 +1,21 @@
 <div class="main">
-    <h1>日報編集</h1>
+    <h1>日報詳細</h1>
 
-    <%= form_tag("/reports/update/#{@report.id}") do %>
     <div class="report-new">
         <div>
             <p>タイトル</p>
-            <input name="title" value="<%= @report.title %>">
+                <div class="show-title">
+                    <%= @report.title %>
+                </div>
             <p>日報内容</p>
-            <textarea name="content"><%= @report.content %></textarea>
+                <div class="show-content">
+                    <%= @report.content %>
+                </div>
         </div>
 
-        <input type="submit" value="作成" class="new-btn">
+        <div class="edit-btn">
+            <%= link_to("編集","/reports/edit/#{@report.id}") %>
+        </div>
+        <div class="damy"></div>
     </div>
-    <% end %>
 </div>

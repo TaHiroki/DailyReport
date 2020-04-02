@@ -19,6 +19,10 @@ class ReportsController < ApplicationController
     @report = Report.find_by(id: params[:id])
   end
 
+  def edit
+    @report = Report.find_by(id: params[:id])
+  end
+
   def update
     @report = Report.find_by(id: params[:id])
     @report.title = params[:title]
