@@ -18,4 +18,12 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find_by(id: params[:id])
   end
+
+  def update
+    @report = Report.find_by(id: params[:id])
+    @report.title = params[:title]
+    @report.content = params[:content]
+    @report.save
+    redirect_to("/reports/show/#{@reort.id}")
+  end
 end
