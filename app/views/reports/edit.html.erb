@@ -3,6 +3,12 @@
 
     <%= form_tag("/reports/update/#{@report.id}") do %>
     <div class="report-new">
+        <div class="error-messages">
+            <% @report.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        </div>
+
         <div>
             <p>タイトル</p>
             <input name="title" value="<%= @report.title %>">
