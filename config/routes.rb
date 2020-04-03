@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/index'
+  get 'users/index' => 'users#index'
+  get '/allusers' => 'users#all'
+
+
   get 'reports/index' => 'reports#index'
   get 'reports/new' => 'reports#new'
   post 'reports/create' => 'reports#create'
@@ -7,7 +10,5 @@ Rails.application.routes.draw do
   get 'reports/edit/:id' => 'reports#edit'
   post 'reports/update/:id' => 'reports#update'
   post 'reports/destroy/:id' => 'reports#destroy'
-
-
 
 end
