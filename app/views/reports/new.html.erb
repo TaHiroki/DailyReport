@@ -3,11 +3,17 @@
 
     <%= form_tag("/reports/create") do %>
     <div class="report-new">
+        <div class="error-messages">
+            <% @report.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        </div>
+
         <div>
             <p>タイトル</p>
-            <input name="title">
+            <input name="title" value="<%= @report.title %>">
             <p>日報内容</p>
-            <textarea name="content"></textarea>
+            <textarea name="content"><%= @report.content %></textarea>
         </div>
 
         <input type="submit" value="作成" class="new-btn">

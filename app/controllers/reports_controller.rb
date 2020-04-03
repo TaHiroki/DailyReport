@@ -4,15 +4,18 @@ class ReportsController < ApplicationController
   end
 
   def new
-
+    @report = Report.new
   end
 
   def create
     @report = Report.new
     @report.title = params[:title]
     @report.content = params[:content]
-    @report.save
-    redirect_to("/reports/index")
+    if @report.save
+      redirect_to("/reports/index")
+    else
+      render("reports/new")
+    end
   end
 
   def show
