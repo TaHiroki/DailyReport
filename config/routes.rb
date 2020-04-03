@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'users/index' => 'users#index'
   get '/allusers' => 'users#all'
+  get 'users/new' => 'users#new'
+  post 'users/create' => 'users#create'
 
 
   get 'reports/index' => 'reports#index'
