@@ -43,7 +43,7 @@ class ReportsController < ApplicationController
     @report = Report.find_by(id: params[:id])
     @report.destroy
     flash[:notice] = "削除しました"
-    redirect_to("/reports/index")
+    redirect_to("/users/index")
   end
 
 end

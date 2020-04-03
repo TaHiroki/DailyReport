@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = User.find_by(id: 2)
+    @user = User.find_by(id: 1)
   end
 
   def new

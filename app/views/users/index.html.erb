@@ -8,10 +8,28 @@
             </div>
             <p><%= @user.name%></p>
         </div>
+    </div>
 
-        <div class="user-report">
-            userreport
-        </div>
+        <div class="reports">
+        <% @user.post.each do |report|%>
+            <div class="report">
+                <h2><%= report.user.name %></h2>
+                <div>
+                    <div class="report-title">
+                        タイトル：　<%= report.title %>
+                    </div>
+                    <div class="report-show">
+                        <%= link_to  "詳細", "/reports/show/#{report.id}" %>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <span><%= report.created_at %></span>
+                <div class="report-action">
+                    <%= link_to  "編集", "/reports/edit/#{report.id}" %>
+                    <%= link_to  "削除", "/reports/destroy/#{report.id}",{method: "post"} %>
+                </div>
+            </div>
+        <% end %>
     </div>
 </div>
 
