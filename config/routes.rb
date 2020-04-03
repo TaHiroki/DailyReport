@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'reports/show/:id' => 'reports#show'
   get 'reports/edit/:id' => 'reports#edit'
   post 'reports/update/:id' => 'reports#update'
+  post 'reports/destroy/:id' => 'reports#destroy'
 
 
 

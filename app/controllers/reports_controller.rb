@@ -28,6 +28,12 @@ class ReportsController < ApplicationController
     @report.title = params[:title]
     @report.content = params[:content]
     @report.save
-    redirect_to("/reports/show/#{@reort.id}")
+    redirect_to("/reports/show/#{@report.id}")
+  end
+
+  def destroy
+    @report = Report.find_by(id: params[:id])
+    @report.destroy
+    redirect_to("/reports/index")
   end
 end
