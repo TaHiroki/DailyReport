@@ -4,7 +4,7 @@
     <div class="user">
         <div class="user-page">
             <div class="user-img">
-                <img src="/user-image/<%= @user.user_img %>">
+                <img src="<%= "/user-image/#{@user.user_img}" %>">
             </div>
             <p><%= @user.name%></p>
         </div>
@@ -34,7 +34,7 @@
 
     <div class="user-btn">
         <div class="user-create-btn">
-            <%= link_to("ユーザー編集", "/users/edit") %>
+            <%= link_to("ユーザー編集", "/users/edit/#{@user.id}") %>
         </div>
         <div class="user-destroy-btn">
             <%= link_to("ユーザー削除", "/users/destroy") %>

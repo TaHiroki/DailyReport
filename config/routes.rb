@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/allusers' => 'users#all'
   get 'users/new' => 'users#new'
   post 'users/create' => 'users#create'
+  get 'users/edit/:id' => 'users#edit'
+  post 'users/update/:id' => 'users#update'
 
 
   get 'reports/index' => 'reports#index'
