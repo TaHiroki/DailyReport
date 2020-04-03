@@ -45,4 +45,5 @@ class ReportsController < ApplicationController
     flash[:notice] = "削除しました"
     redirect_to("/reports/index")
   end
+
 end
