@@ -132,6 +132,17 @@ header {
     text-decoration: none;
 }
 
+.flash {
+    width: 100%;
+    max-width: 500px;
+    background-color: lightgreen;
+    text-align: center;
+    color: orangered;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
 /*---------------------------*/
 /* footer */
 footer {

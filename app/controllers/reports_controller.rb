@@ -12,6 +12,7 @@ class ReportsController < ApplicationController
     @report.title = params[:title]
     @report.content = params[:content]
     if @report.save
+      flash[:notice] = "作成しました"
       redirect_to("/reports/index")
     else
       render("reports/new")
@@ -31,6 +32,7 @@ class ReportsController < ApplicationController
     @report.title = params[:title]
     @report.content = params[:content]
     if @report.save
+      flash[:notice] = "変更しました"
       redirect_to("/reports/show/#{@report.id}")
     else
       render("reports/edit")
