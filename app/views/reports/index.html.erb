@@ -20,10 +20,12 @@
                 </div>
                 <div class="clear"></div>
                 <span><%= report.created_at %></span>
-                <div class="report-action">
-                    <%= link_to  "編集", "/reports/edit/#{report.id}" %>
-                    <%= link_to  "削除", "/reports/destroy/#{report.id}",{method: "post"} %>
-                </div>
+                <% if report.user_id == @current_user.id %>
+                    <div class="report-action">
+                        <%= link_to  "編集", "/reports/edit/#{report.id}" %>
+                        <%= link_to  "削除", "/reports/destroy/#{report.id}",{method: "post"} %>
+                    </div>
+                <% end %>
             </div>
         <% end %>
     </div>

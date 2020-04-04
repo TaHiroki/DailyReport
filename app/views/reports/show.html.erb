@@ -13,9 +13,11 @@
                 </div>
         </div>
 
-        <div class="edit-btn">
-            <%= link_to("編集","/reports/edit/#{@report.id}") %>
-        </div>
+        <% if @report.user_id == @current_user.id %>
+            <div class="edit-btn">
+                <%= link_to("編集","/reports/edit/#{@report.id}") %>
+            </div>
+        <% end %>
         <div class="damy"></div>
     </div>
 </div>
