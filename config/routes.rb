@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   post 'reports/update/:id' => 'reports#update'
   post 'reports/destroy/:id' => 'reports#destroy'
 
-  get 'comment/new' => 'comment#new'
+  get 'comments/new' => 'comments#new'
 
 end

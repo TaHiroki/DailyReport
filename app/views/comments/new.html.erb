@@ -4,14 +4,14 @@
     <%= form_tag("/reports/create") do %>
     <div class="report-new">
         <div class="error-messages">
-            <% @report.errors.full_messages.each do |message| %>
+            <% @comment.errors.full_messages.each do |message| %>
                 <p><%= message %></p>
             <% end %>
         </div>
 
         <div>
-            <p>日報内容</p>
-            <textarea name="content"><%= @report.content %></textarea>
+            <p>コメント</p>
+            <textarea name="content"><%= @comment.comment %></textarea>
         </div>
 
         <input type="submit" value="作成" class="new-btn">
