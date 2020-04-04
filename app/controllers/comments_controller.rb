@@ -8,9 +8,14 @@ class CommentsController < ApplicationController
     @comment.comment = params[:comment]
     @comment.report_id = session[:report_id]
     @comment.user_id = @current_user.id
-    @comment.save
-    @report_id = session[:report_id]
-    session[:report_id] = nil
-    redirect_to("/reports/show/#{@report_id}")
+    if @comment.save
+      @report_id = session[:report_id]
+      session[:report_id] = nil
+      flash[:notice] = "コメントを作成しました"
+      redirect_to("/reports/show/#{@report_id}")
+    else
+      render("comments/new")
+    end
   end
+
 end

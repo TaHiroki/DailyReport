@@ -10,3 +10,5 @@ ja:
         name: 名前
         email: 
         password: パスワード
+      comment:
+        comment: コメント
