@@ -7,7 +7,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @comment.comment = params[:comment]
     @comment.report_id = session[:report_id]
+    @comment.user_id = @current_user.id
     @comment.save
-    redirect_to("/reports/show/#{session[:report_id]}")
+    @report_id = session[:report_id]
+    session[:report_id] = nil
+    redirect_to("/reports/show/#{@report_id}")
   end
 end
