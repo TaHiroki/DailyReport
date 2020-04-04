@@ -3,13 +3,19 @@
 
     <%= form_tag("/users/create") do %>
     <div class="report-new">
+        <div class="error-messages">
+            <% @user.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        </div>
+
         <div>
             <p>名前</p>
-            <input name="name">
+            <input name="name" value="<%= @user.name %>">
             <p>Email</p>
-            <input name="email">
+            <input name="email" value="<%= @user.email %>">
             <p>パスワード</p>
-            <input name="password">
+            <input name="password" value="<%= @user.password %>">
         </div>
 
         <input type="submit" value="作成" class="new-btn">

@@ -3,6 +3,12 @@
 
     <%= form_tag("/users/update/#{@user.id}", {multipart: true}) do %>
     <div class="report-new">
+        <div class="error-messages">
+            <% @user.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        </div>
+        
         <div>
             <p>名前</p>
             <input name="name" value="<%= @user.name %>">

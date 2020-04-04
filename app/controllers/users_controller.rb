@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
-
+      @user = User.new
   end
 
   def create
@@ -14,8 +14,12 @@ class UsersController < ApplicationController
     @user.password = params[:password]
     @user.delete_flag = 0
     @user.user_img = "default.png"
-    @user.save
-    redirect_to("/reports/index")
+    if @user.save
+      flash[:notice] = "作成しました"
+      redirect_to("/reports/index")
+    else
+      render("users/new")
+    end
   end
 
   def edit
@@ -32,8 +36,13 @@ class UsersController < ApplicationController
       image = params[:user_img]
       File.binwrite("public/user-image/#{@user.user_img}", image.read)
     end
-    @user.save
-    render("users/index")
+
+    if @user.save
+      flash[:notice] = "編集しました"
+      render("users/index")
+    else
+      render("users/edit")
+    end
   end
 
 

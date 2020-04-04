@@ -6,3 +6,7 @@ ja:
       report:
         title: タイトル
         content: 日報内容
+      user:
+        name: 名前
+        email: 
+        password: パスワード
