@@ -72,7 +72,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "編集しました"
-      render("users/index")
+      redirect_to("/users/index")
     else
       render("users/edit")
     end
