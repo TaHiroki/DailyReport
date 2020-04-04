@@ -1,7 +1,7 @@
 <div class="main">
     <h1>コメント作成</h1>
 
-    <%= form_tag("/reports/create") do %>
+    <%= form_tag("/comments/create") do %>
     <div class="report-new">
         <div class="error-messages">
             <% @comment.errors.full_messages.each do |message| %>
@@ -11,7 +11,7 @@
 
         <div>
             <p>コメント</p>
-            <textarea name="content"><%= @comment.comment %></textarea>
+            <textarea name="comment"><%= @comment.comment %></textarea>
         </div>
 
         <input type="submit" value="作成" class="new-btn">

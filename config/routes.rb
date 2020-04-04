@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   post 'reports/destroy/:id' => 'reports#destroy'
 
   get 'comments/new' => 'comments#new'
+  post 'comments/create' => 'comments#create'
 
 end
