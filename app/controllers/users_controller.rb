@@ -72,8 +72,4 @@ class UsersController < ApplicationController
     end
   end
 
-
-  def all
-    @users = User.all
-  end
 end
