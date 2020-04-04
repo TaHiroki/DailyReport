@@ -13,6 +13,7 @@ class ReportsController < ApplicationController
     @report = Report.new
     @report.title = params[:title]
     @report.content = params[:content]
+    @report.user_id = @current_user.id
     if @report.save
       flash[:notice] = "作成しました"
       redirect_to("/reports/index")

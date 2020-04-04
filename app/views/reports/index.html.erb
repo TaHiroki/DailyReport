@@ -4,7 +4,12 @@
     <div class="reports">
         <% @reports.each do |report|%>
             <div class="report">
-                <h2><%= report.user.name %></h2>
+                <h2>
+                    <%= report.user.name %>
+                    <% if report.user.delete_flag == 1%>
+                        :削除済み
+                    <% end %>
+                </h2>
                 <div>
                     <div class="report-title">
                         タイトル：　<%= report.title %>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user,{only: [:index, :new, :create, :edit, :update, :destroy]}
+  before_action :authenticate_user,{only: [:index, :edit, :update, :destroy]}
 
   def login
 
@@ -8,6 +8,10 @@ class UsersController < ApplicationController
   def login_user
     @user = User.find_by(email: params[:email],
                          password: params[:password])
+    if @user.delete_flag == 1
+      flash[:notice] = "削除されています"
+      redirect_to("/login")
+    end
     
     if @user
       flash[:notice] = "ログインしました"
@@ -44,7 +48,8 @@ class UsersController < ApplicationController
     @user.user_img = "default.png"
     if @user.save
       flash[:notice] = "作成しました"
-      redirect_to("/reports/index")
+      session[:user_id] = @user.id
+      redirect_to("/users/index")
     else
       render("users/new")
     end
@@ -71,6 +76,15 @@ class UsersController < ApplicationController
     else
       render("users/edit")
     end
+  end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.delete_flag = 1
+    @user.save
+    session[:user_id] = nil
+    flash[:notice] = "削除しました"
+    redirect_to("/login")
   end
 
 end
