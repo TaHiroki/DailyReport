@@ -1,0 +1,22 @@
+<div class="main">
+    <h1>ログイン</h1>
+
+    <%= form_tag("/users/login_user") do %>
+    <div class="report-new">
+        <div class="error-messages">
+            <% if @message %>
+                <p><%= @message %></p>
+            <% end %>
+        </div>
+
+        <div>
+            <p>Email</p>
+            <input name="email" >
+            <p>パスワード</p>
+            <input type="password" name="password" >
+        </div>
+
+        <input type="submit" value="ログイン" class="new-btn">
+    </div>
+    <% end %>
+</div>

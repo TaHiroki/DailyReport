@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/login' => 'users#login'
+  post '/users/login_user' => 'users#login_user'
+  post '/users/logout' => 'users#logout'
   get 'users/index' => 'users#index'
   get '/allusers' => 'users#all'
   get 'users/new' => 'users#new'

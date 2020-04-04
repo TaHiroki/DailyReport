@@ -1,6 +1,33 @@
 class UsersController < ApplicationController
+
+  def login
+
+  end
+
+  def login_user
+    @user = User.find_by(email: params[:email],
+                         password: params[:password])
+    
+    if @user
+      flash[:notice] = "ログインしました"
+      session[:user_id] = @user.id
+      redirect_to("/users/index")
+    else
+      flash[:notice] = "ログインできませんでした。"
+      @message = "Emailかパスワードを確かめてください"
+      render("users/login")
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
+    redirect_to("/login")
+  end
+
+
   def index
-    @user = User.find_by(id: 1)
+    @user = User.find_by(id: session[:user_id])
   end
 
   def new
