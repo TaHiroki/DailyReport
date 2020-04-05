@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user,{only: [:index, :edit, :update, :destroy]}
 
   def login
-
+    session[:user_id] = nil
   end
 
   def login_user
