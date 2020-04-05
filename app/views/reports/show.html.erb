@@ -41,7 +41,7 @@
                 <div class="clear"></div>
                 <span><%= comment.created_at %></span>
                     <div class="report-action">
-                        <%= link_to  "編集", "/reports/edit" %>
+                        <%= link_to  "編集", "/comments/edit/#{comment.id}" %>
                         <%= link_to  "削除", "/reports/destroy" %>
                     </div>
             </div>

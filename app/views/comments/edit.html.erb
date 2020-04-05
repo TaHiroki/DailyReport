@@ -1,0 +1,20 @@
+<div class="main">
+    <h1>コメント編集</h1>
+
+    <%= form_tag("/comments/update/#{@comment.id}") do %>
+    <div class="report-new">
+        <div class="error-messages">
+            <% @comment.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        </div>
+
+        <div>
+            <p>コメント</p>
+            <textarea name="comment"><%= @comment.comment%></textarea>
+        </div>
+
+        <input type="submit" value="編集" class="new-btn">
+    </div>
+    <% end %>
+</div>
