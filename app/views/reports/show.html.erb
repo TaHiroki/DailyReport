@@ -40,10 +40,12 @@
                 </div>
                 <div class="clear"></div>
                 <span><%= comment.created_at %></span>
+                <% if comment.user_id == @current_user.id %>
                     <div class="report-action">
                         <%= link_to  "編集", "/comments/edit/#{comment.id}" %>
-                        <%= link_to  "削除", "/reports/destroy" %>
+                        <%= link_to  "削除", "/comments/destroy/#{comment.id}", {method: "post"} %>
                     </div>
+                <% end %>
             </div>
         <% end %>
     </div>

@@ -22,4 +22,23 @@ class CommentsController < ApplicationController
     @comment = Comment.find_by(id: params[:id])
   end
 
+  def update
+    @comment = Comment.find_by(id: params[:id])
+    @comment.comment = params[:comment]
+    if @comment.save
+      flash[:notice] = "コメントを編集しました"
+      redirect_to("/reports/show/#{@comment.report_id}")
+    else
+        render("comments/edit")
+    end
+  end
+
+  def destroy
+    @comment = Comment.find_by(id: params[:id])
+    @report_id = @comment.report_id
+    @comment.destroy
+    flash[:notice] = "コメントを削除しました"
+    redirect_to("/reports/show/#{@report_id}")
+  end
+
 end
