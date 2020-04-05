@@ -32,6 +32,9 @@
             <div class="report">
                 <h3>
                     <%= comment.user.name%>
+                    <% if comment.user.delete_flag == 1%>
+                        :削除されたアカウント
+                    <% end %>
                 </h3>
                 <div>
                     <div class="comment-title">
