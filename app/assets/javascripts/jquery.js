@@ -12,4 +12,8 @@ $(function(){
         $('.login-modal').fadeIn();
     });
 
+    $('.x-btn').click(function(){
+        $('.login-modal').fadeOut();
+    });
+
 });
