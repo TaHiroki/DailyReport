@@ -26,6 +26,7 @@ class ReportsController < ApplicationController
     @report = Report.find_by(id: params[:id])
     session[:report_id] = @report.id
     @comments = Comment.where(report_id: @report.id).order(created_at: :desc)
+    @like_count = Like.where(report_id: @report.id).count
   end
 
   def edit
