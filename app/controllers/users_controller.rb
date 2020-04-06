@@ -6,20 +6,21 @@ class UsersController < ApplicationController
   end
 
   def login_user
-    @user = User.find_by(email: params[:email],
-                         password: params[:password])
+    @user = User.find_by(email: params[:email])
     if @user.delete_flag == 1
-      flash[:notice] = "削除されています"
-      redirect_to("/login")
+      @user = nil
     end
     
-    if @user
+    if @user && @user.authenticate(params[:password])
       flash[:notice] = "ログインしました"
       session[:user_id] = @user.id
       redirect_to("/users/index")
     else
-      flash[:notice] = "ログインできませんでした。"
-      @message = "Emailかパスワードを確かめてください"
+      if @user == nil
+        flash[:notice] = "削除されたアカウントです"
+      else
+        flash[:notice] = "ログインできませんでした。"
+      end
       render("users/login")
     end
   end
