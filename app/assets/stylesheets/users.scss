@@ -16,8 +16,40 @@
     border-radius: 10px;
 }
 
-#login_form {
+.login_form {
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: white;
+    width: 400px;
+    height: 230px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.report-new h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
     display: none;
+}
+
+.x-btn {
+    width:10px;
+    height:10px;
+    color: gray;
+    position: absolute;
+    right: 30px;
+    top: 5px;
 }
 
 /*---------------------------*/

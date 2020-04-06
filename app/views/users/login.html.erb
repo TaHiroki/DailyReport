@@ -4,28 +4,31 @@
         <img src="/user-image/toppage.jpg">
     </div>
 
-    <div class="login-btn">
+    <div class="login-btn" id="login_btn">
         ログイン
     </div>
+    <div class="login-modal">
+        <div>
+            <%= form_tag("/users/login_user") do %>
+            <div class="report-new login_form">
+                <div class="error-messages">
+                    <% if @message %>
+                        <p><%= @message %></p>
+                    <% end %>
+                </div>
 
-    <div id="login_form">
-        <%= form_tag("/users/login_user") do %>
-        <div class="report-new">
-            <div class="error-messages">
-                <% if @message %>
-                    <p><%= @message %></p>
-                <% end %>
+                <h2>ログイン</h2>
+                <i class="fa fa-2x fa-times x-btn"></i>
+                <div>
+                    <p>Email</p>
+                    <input name="email" >
+                    <p>パスワード</p>
+                    <input type="password" name="password" >
+                </div>
+
+                <input type="submit" value="ログイン" class="new-btn">
             </div>
-
-            <div>
-                <p>Email</p>
-                <input name="email" >
-                <p>パスワード</p>
-                <input type="password" name="password" >
-            </div>
-
-            <input type="submit" value="ログイン" class="new-btn">
+            <% end %>
         </div>
-        <% end %>
     </div>
 </div>
