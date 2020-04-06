@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-                <span><%= comment.created_at %></span>
+                <span><%= comment.created_at.to_s(:datetime_jp) %></span>
                 <% if comment.user_id == @current_user.id %>
                     <div class="report-action">
                         <%= link_to  "編集", "/comments/edit/#{comment.id}" %>
