@@ -41,9 +41,15 @@
     text-align: center;
 }
 
-.report-show a ,.report-action a{
+.report-action a{
     color: black;
     text-decoration: none;
+}
+
+.report-show a {
+    color: black;
+    text-decoration: none;
+    display: block;
 }
 
 .report-action {
@@ -133,6 +139,7 @@
 .edit-btn a {
     color: black;
     text-decoration: none;
+    display: block;
 }
 
 .damy {
@@ -153,6 +160,7 @@
 .comment-btn a {
     color: black;
     text-decoration: none;
+    display: block;
 }
 
 .comment h2 {
