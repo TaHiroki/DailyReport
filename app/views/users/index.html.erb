@@ -38,7 +38,7 @@
             <%= link_to("ユーザー編集", "/users/edit/#{@user.id}") %>
         </div>
         <div class="user-destroy-btn">
-            <%= link_to("ユーザー削除", "/users/destroy/#{@user.id}") %>
+            <%= link_to("ユーザー削除", "/users/destroy/#{@user.id}", {id: "delete_alert"}) %>
         </div>
     </div>
     <div class="clear"></div>
