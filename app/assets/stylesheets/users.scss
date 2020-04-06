@@ -1,4 +1,26 @@
 /*---------------------------*/
+/* login */
+.toppage-img img{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.login-btn {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    background-color: greenyellow;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#login_form {
+    display: none;
+}
+
+/*---------------------------*/
 /* index */
 .user {
     width: 50%;
