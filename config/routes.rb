@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes/create'
   get 'comments/new'
   get 'comments/create'
   get '/login' => 'users#login'
@@ -25,5 +26,8 @@ Rails.application.routes.draw do
   get 'comments/edit/:id' => 'comments#edit'
   post 'comments/update/:id' => 'comments#update'
   post 'comments/destroy/:id' => 'comments#destroy'
+
+  post 'likes/:report_id/create' => 'likes#create'
+  post 'likes/:report_id/destroy' => 'likes#destroy'
 
 end

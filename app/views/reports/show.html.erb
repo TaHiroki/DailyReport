@@ -13,6 +13,14 @@
                 </div>
         </div>
 
+        <div class="like">
+            <% if Like.find_by(user_id: @current_user.id, report_id: @report.id) %>
+                <%= link_to("いいね済み","/likes/#{@report.id}/destroy", {method: "post"}) %>
+            <% else %>
+                <%= link_to("いいね!","/likes/#{@report.id}/create", {method: "post"}) %>
+            <% end %>
+        </div>
+
         <% if @report.user_id == @current_user.id %>
             <div class="edit-btn">
                 <%= link_to("編集","/reports/edit/#{@report.id}") %>
