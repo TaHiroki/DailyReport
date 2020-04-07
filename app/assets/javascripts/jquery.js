@@ -16,4 +16,10 @@ $(function(){
         $('.login-modal').fadeOut();
     });
 
+    $('#bars').click(function(){
+        $('#header-back').fadeIn();
+        $('#x-btn2').fadeIn();
+        $('#bars').fadeOut();
+    });
+
 });

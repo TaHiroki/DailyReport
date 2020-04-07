@@ -16,32 +16,40 @@
       <div class="header-logo"> 
         <p>日報管理</p>
       </div>
-      <ul class="header-menus">
-        <% if session[:user_id] %>
-          <li>
-            <%= "ログイン：#{@current_user.name}　　" %>
-          </li>
-          <li>
-            <%= link_to "マイページ","/users/index" %>
-          </li>
-          <li>
-            <%= link_to "日報一覧","/reports/index" %>
-          </li>
-          <li>
-            <%= link_to "日報作成","/reports/new" %>
-          </li>
-          <li>
-            <%= link_to "ログアウト","/users/logout", {method: "post"} %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "新規アカウント作成","/users/new" %>
-          </li>
-          <li>
-            <%= link_to "ログインページ","/login" %>
-          </li>
-        <% end %>
-      </ul>
+      <i class="fa fa-bars" id="bars"></i>
+      <div class="xbox">
+        <i class="fa fa-2x fa-times" id="x-btn2"></i>
+      </div>
+      <div id="header-back">
+        <div id="header-menu">
+          <ul class="header-menus">
+            <% if session[:user_id] %>
+              <li>
+                <%= "ログイン：#{@current_user.name}　　" %>
+              </li>
+              <li>
+                <%= link_to "マイページ","/users/index" %>
+              </li>
+              <li>
+                <%= link_to "日報一覧","/reports/index" %>
+              </li>
+              <li>
+                <%= link_to "日報作成","/reports/new" %>
+              </li>
+              <li>
+                <%= link_to "ログアウト","/users/logout", {method: "post"} %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "新規アカウント作成","/users/new" %>
+              </li>
+              <li>
+                <%= link_to "ログインページ","/login" %>
+              </li>
+            <% end %>
+          </ul>
+          </div>
+        </div>
     </header>
 
     <% if flash[:notice] %>
