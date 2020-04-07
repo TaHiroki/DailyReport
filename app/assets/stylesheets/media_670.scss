@@ -130,87 +130,143 @@ header {
 
 /*---------------------------*/
 /* show */
-.show-title {
-    margin: 20px 20px;
-    font-size: 15px;
-    border-top: dotted 1px black;
-    padding-top: 10px;
-}
-
-.show-content {
-    margin: 20px 20px;
-    font-size: 15px;
-    border-top: dotted 1px black;
-    padding-top: 10px;
-    height: 150px;
-}
-
-.edit-btn {
-    margin-left: 80%;
-    background-color: lightgrey;
-    font-size: 15px;
-    width: 50px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-}
-
-.edit-btn a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.damy {
-    width: 100%;
-    height: 20px;
-}
-
-.comment-btn {
-    background-color: lightgrey;
-    width: 130px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    margin-left: 65%;
-    margin-top: 30px;
-}
-
-.comment-btn a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
 .comment h2 {
-    margin-bottom: 20px;
+    margin: 20px 0;
+
     font-size: 30px;
+    text-align: center;
 }
 
 .comment-title {
     float: left;
     border:dotted 1px black;
     width: 95%;
-    margin: 0px 0px 5px 10px;
-}
-
-.like-btn {
-    color: red;
-    margin-left: 30px;
-}
-
-.like-btn-unlike {
-    color: grey;
-    margin-left: 30px;
-}
-
-.like a {
-    text-decoration: none;
+    margin: 5px 0px 15px 10px!important;
 }
 
 /* report */
 /*---------------------------*/
 
+/*---------------------------*/
+/* user login */
+.toppage-img img{
+    width: 100%;
+    margin: 20px 0px;
+}
 
+.login-btn {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    background-color: greenyellow;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px 0 green;
+    cursor: pointer;
+}
+
+.login-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
+.login_form {
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: white;
+    width: 400px;
+    height: 230px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.login_form i {
+    cursor: pointer;
+}
+
+.report-new h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.login-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.x-btn {
+    width:10px;
+    height:10px;
+    color: gray;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+}
+
+/*---------------------------*/
+/* index */
+.user {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.user-page {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-page p {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.user-img img {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.user-btn {
+    float: right;
+}
+
+.user-btn a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.user-create-btn{
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    background-color: lightgrey;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.user-destroy-btn {
+    display: inline-block;
+    float: right;
+    width: 130px;
+    height: 30px;
+    background-color: lightgrey;
+    text-align: center;
+    line-height: 28px;
+}
 
 }
