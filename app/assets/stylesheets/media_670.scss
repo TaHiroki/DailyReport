@@ -72,23 +72,145 @@ header {
 }
 
 
-.flash {
-    width: 100%;
-    max-width: 500px;
-    background-color: lightgreen;
-    text-align: center;
-    color: orangered;
-    font-size: 20px;
-    margin: 0 auto;
-    padding: 5px 0;
-}
-
 /*---------------------------*/
 /* footer */
 
 .footer-name {
     margin-right: 35%;
 }
+
+/*---------------------------*/
+/* report index */
+
+.main h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.reports {
+    margin: 30px auto;
+    background-color: rgb(253, 253, 253);
+    width: 450px;
+}
+
+.report-title {
+    float: left;
+    border:dotted 1px black;
+    width: 300px!important;
+    margin: 0px 0px 20px 10px!important;
+}
+
+.report {
+    box-shadow: 0 2px 6px #c1ced7;
+    padding-bottom: 10px;
+    height: 80px!important;
+}
+
+/*---------------------------*/
+/* new */
+.report-new {
+    width: 80%!important;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.report-new input {
+    width: 85%!important;
+    margin-left: 20px!important;
+    font-size:  15px;
+}
+
+.report-new textarea {
+    width: 85%!important;
+    height: 150px;
+    margin-left: 20px;
+    font-size:  15px;
+}
+
+
+/*---------------------------*/
+/* show */
+.show-title {
+    margin: 20px 20px;
+    font-size: 15px;
+    border-top: dotted 1px black;
+    padding-top: 10px;
+}
+
+.show-content {
+    margin: 20px 20px;
+    font-size: 15px;
+    border-top: dotted 1px black;
+    padding-top: 10px;
+    height: 150px;
+}
+
+.edit-btn {
+    margin-left: 80%;
+    background-color: lightgrey;
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.edit-btn a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.damy {
+    width: 100%;
+    height: 20px;
+}
+
+.comment-btn {
+    background-color: lightgrey;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 65%;
+    margin-top: 30px;
+}
+
+.comment-btn a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.comment h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.comment-title {
+    float: left;
+    border:dotted 1px black;
+    width: 95%;
+    margin: 0px 0px 5px 10px;
+}
+
+.like-btn {
+    color: red;
+    margin-left: 30px;
+}
+
+.like-btn-unlike {
+    color: grey;
+    margin-left: 30px;
+}
+
+.like a {
+    text-decoration: none;
+}
+
+/* report */
+/*---------------------------*/
+
 
 
 }
