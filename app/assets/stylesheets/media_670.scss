@@ -161,69 +161,11 @@ header {
     padding-right: 20px;
 }
 
-.x-btn {
-    width:10px;
-    height:10px;
-    color: gray;
-    position: absolute;
-    right: 30px;
-    top: 5px;
-}
 
 /*---------------------------*/
 /* index */
-.user {
-    width: 50%;
-    max-width: 500px;
-    margin: 0 auto;
-}
 
-.user-page {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.user-page p {
-    font-size: 20px;
-    margin: 20px 0px;
-}
-
-.user-img img {
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
-    border-radius: 50%;
-}
-
-.user-btn {
-    float: right;
-}
-
-.user-btn a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.user-create-btn{
-    display: inline-block;
-    width: 130px;
-    height: 30px;
-    background-color: lightgrey;
-    margin-right: 20px;
-    text-align: center;
-    line-height: 28px;
-}
-
-.user-destroy-btn {
-    display: inline-block;
-    float: right;
-    width: 130px;
-    height: 30px;
-    background-color: lightgrey;
-    text-align: center;
-    line-height: 28px;
-}
+/* user */
+/*---------------------------*/
 
 }
