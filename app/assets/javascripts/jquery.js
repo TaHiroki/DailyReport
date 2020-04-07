@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
 
     $('#delete_alert').click(function(){
         if(!confirm('本当に削除しますか？')){
@@ -23,9 +23,10 @@ $(function(){
     });
 
     $('#x-btn2').click(function(){
-        $('#header-back').fadeOut();
-        $('#x-btn2').fadeOut();
+        $('#header-back').fadeIn();
+        $('#x-btn2').fadeOut;
         $('#bars').fadeIn();
+        $('#header-back').removeAttr('style');
     });
 
 });
