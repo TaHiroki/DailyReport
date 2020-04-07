@@ -149,59 +149,16 @@ header {
 
 /*---------------------------*/
 /* user login */
-.toppage-img img{
-    width: 100%;
-    margin: 20px 0px;
-}
-
-.login-btn {
-    width: 150px;
-    height: 40px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 40px;
-    background-color: greenyellow;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 5px 0 green;
-    cursor: pointer;
-}
-
-.login-btn:active {
-    box-shadow: none;
-    position: relative;
-    top: 6px;
-}
 
 .login_form {
-    position: absolute;
-    top: 20%;
-    left: 34%;
+    position: absolute!important;
+    bottom: 70%!important;
+    left: 10%!important;
     background-color: white;
     width: 400px;
     height: 230px;
     text-align: center;
     padding-right: 20px;
-}
-
-.login_form i {
-    cursor: pointer;
-}
-
-.report-new h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-.login-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 100;
-    display: none;
 }
 
 .x-btn {
