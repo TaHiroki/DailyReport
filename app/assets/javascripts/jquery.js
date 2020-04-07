@@ -22,4 +22,10 @@ $(function(){
         $('#bars').fadeOut();
     });
 
+    $('#x-btn2').click(function(){
+        $('#header-back').fadeOut();
+        $('#x-btn2').fadeOut();
+        $('#bars').fadeIn();
+    });
+
 });
