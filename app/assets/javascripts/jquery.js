@@ -17,16 +17,15 @@ $(document).on('turbolinks:load',function(){
     });
 
     $('#bars').click(function(){
-        $('#header-back').fadeIn();
+        $('#header-back').show();
         $('#x-btn2').fadeIn();
         $('#bars').fadeOut();
     });
 
     $('#x-btn2').click(function(){
-        $('#header-back').fadeIn();
-        $('#x-btn2').fadeOut;
-        $('#bars').fadeIn();
         $('#header-back').removeAttr('style');
+        $('#x-btn2').fadeOut();
+        $('#bars').fadeIn();
     });
 
 });
