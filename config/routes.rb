@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: 'users#login_user'
+
   get 'likes/create'
   get 'comments/new'
   get 'comments/create'
