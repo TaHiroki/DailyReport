@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'users#login_user'
 
-  get '/login' => 'users#login'
-  post '/users/login_user' => 'users#login_user'
-  post '/users/logout' => 'users#logout'
+  get 'login' => 'users#login'
+  post 'users/login_user' => 'users#login_user'
+  post 'users/logout' => 'users#logout'
   get 'users/index' => 'users#index'
   get 'users/new' => 'users#new'
   post 'users/create' => 'users#create'
