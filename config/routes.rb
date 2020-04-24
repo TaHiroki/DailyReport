@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'users#login_user'
+  root to: '/login'
 
   get '/login' => 'users#login'
   post '/users/login_user' => 'users#login_user'
