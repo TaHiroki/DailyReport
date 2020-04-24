@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
   root to: 'users#login_user'
 
-  get 'likes/create'
-  get 'comments/new'
-  get 'comments/create'
   get '/login' => 'users#login'
   post '/users/login_user' => 'users#login_user'
   post '/users/logout' => 'users#logout'
